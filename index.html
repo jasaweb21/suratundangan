@@ -366,6 +366,33 @@
       color: var(--color-gold);
     }
 
+        .music-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-gold);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .music-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .music-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
     @media (min-width: 768px) {
       section {
         padding: 64px 0;
@@ -518,6 +545,13 @@
     </div>
   </footer>
 
+    <div class="music-btn" id="music-toggle" title="Putar/Hentikan Musik">
+    </div>
+
+  <audio id="background-music" loop>
+      <source src="https://files.catbox.moe/4u2d0x.mp3" type="audio/mpeg">
+  </audio>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const backgroundImages = [
@@ -572,10 +606,42 @@
           alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk mengirim konfirmasi.');
         });
       }
+        // --- LOGIKA KONTROL MUSIK & HALAMAN PEMBUKA ---
+      const music = document.getElementById('background-music');
+      const musicToggle = document.getElementById('music-toggle');
+      const openInvitationButton = document.getElementById('open-invitation');
+      const openingCover = document.getElementById('opening-cover');
+
+      const iconPlay = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
+      const iconPause = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+      let isPlaying = false;
+      
+      musicToggle.innerHTML = iconPlay; // Set ikon awal
+
+      function toggleMusic() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+            music.play();
+            musicToggle.innerHTML = iconPause;
+        } else {
+            music.pause();
+            musicToggle.innerHTML = iconPlay;
+        }
+      }
+
+      musicToggle.addEventListener('click', toggleMusic);
+
+      openInvitationButton.addEventListener('click', () => {
+        openingCover.classList.add('hidden');
+        if (!isPlaying) {
+            toggleMusic(); // Autoplay musik saat undangan dibuka
+        }
+      });
     });
   </script>
 </body>
 
 </html>
+
 
 
