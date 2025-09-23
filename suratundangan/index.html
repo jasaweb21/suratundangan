@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Pernikahan — Dina & Fadhil</title>
+  <meta name="description" content="Bersama keluarga, kami mengundang Anda untuk hadir pada pernikahan kami. Sabtu, 10 Januari 2026." />
+  <meta property="og:title" content="Undangan Pernikahan — Dina & Fadhil" />
+  <meta property="og:description" content="Satu cerita, dua hati. Kami mengundang Anda untuk hadir dan memberikan doa restu." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1597693344702-0a8f5534b079?q=80&w=1932&auto=format&fit=crop" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-white: #FFFFFF;
+      --color-gold: #C7A86B;
+      --color-charcoal: #222222;
+      --color-gray: #777777;
+      --color-light-gray: #f8f8f8;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-charcoal);
+      background-color: var(--color-charcoal);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transition: background-image 1.5s ease-in-out;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+
+    .section-divider {
+      border: none;
+      height: 1px;
+      background-color: var(--color-gold);
+      opacity: 0.25;
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--color-charcoal);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-gold);
+    }
+
+    p {
+      color: var(--color-gray);
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 28px;
+      font-family: var(--font-sans);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background-color: var(--color-gold);
+      color: var(--color-white);
+      border: 1px solid var(--color-gold);
+    }
+
+    .button-primary:hover {
+      background-color: #b99a5e;
+    }
+
+    .button-outline {
+      background-color: transparent;
+      color: var(--color-white);
+      border: 1px solid var(--color-white);
+    }
+
+    .button-outline:hover {
+      background-color: var(--color-white);
+      color: var(--color-charcoal);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 16px;
+      position: relative;
+      color: var(--color-white);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-ornament {
+      width: 140px;
+      margin-bottom: 1rem;
+      height: 1px;
+      background: var(--color-gold);
+      opacity: 0.8;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 400;
+      margin: 0 0 2.5rem 0;
+      color: var(--color-white);
+    }
+
+    .hero .subtitle, .hero .date {
+      color: var(--color-white);
+      opacity: 0.9;
+    }
+
+    .hero .subtitle {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .date {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .hero-intro {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--color-white);
+      opacity: 0.9;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .main-content-wrapper {
+      background-color: var(--color-white);
+    }
+
+    .main-content-panel {
+      max-width: 920px;
+      margin: auto;
+      padding: 1px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: -80px;
+      position: relative;
+      z-index: 10;
+      background-color: var(--color-white);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .detail-item {
+      padding: 1rem;
+    }
+
+    .detail-item svg {
+      width: 32px;
+      height: 32px;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+
+    .detail-item p {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .calendar-button-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .story-layout img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    #rsvp {
+      padding-bottom: 0;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 2rem;
+      border: 1px solid #eee;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .map-info {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .map-info .button-outline {
+      color: var(--color-gold);
+      border-color: var(--color-gold);
+    }
+
+    .social-section {
+      text-align: center;
+      padding: 40px 0;
+      background-color: var(--color-light-gray);
+    }
+
+    .social-section h3 {
+      margin-bottom: 1.5rem;
+      color: var(--color-charcoal);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-button:hover {
+      background-color: var(--color-gold);
+      transform: translateY(-3px);
+    }
+
+    .social-button svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    footer {
+      background-color: var(--color-charcoal);
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      color: var(--color-gray);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    footer .couple-name {
+      color: var(--color-gold);
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 64px 0;
+      }
+
+      .container {
+        padding: 0 24px;
+      }
+
+      .hero h1 {
+        font-size: 6rem;
+      }
+
+      .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .story-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container fade-up">
+      <div class="hero-ornament"></div>
+      <p class="hero-intro">The Wedding Of</p>
+      <h1>Dina Nun Zakikah Darajat 
+        <br>&<br> 
+          Fadhil Arta Julywan S.Sos</h1>
+      <p class="subtitle">Satu cerita, dua hati. Kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu.</p>
+      <p class="date">Minggu, 19 Oktober 2025</p>
+      <a href="#details" class="button button-outline">Lihat Undangan</a>
+      <div class="hero-ornament" style="margin-top: 1.5rem;"></div>
+    </div>
+  </section>
+
+  <div class="main-content-wrapper">
+    <div class="main-content-panel">
+      <main>
+        <section id="details" class="container">
+          <h2 class="fade-up">Detail Acara</h2>
+          <hr class="section-divider fade-up">
+          <div class="details-grid">
+            <div class="detail-item fade-up">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 10.22A5.5 5.5 0 0 0 17.5 9h-11a5.5 5.5 0 0 0-2.92 10.22"></path><path d="M17.5 9V4a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v5"></path><path d="M8 16h8"></path></svg>
+              <h3>Akad Nikah</h3>
+              <p>Minggu, 19 Oktober 2025<br>Pukul 09.00 WIB - Selesai</p>
+            </div>
+            <div class="detail-item fade-up">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <h3>Resepsi</h3>
+              <p>Minggu, 19 Oktober 2025<br>Pukul 11.00 WIB - Selesai</p>
+            </div>
+          </div>
+          <div class="calendar-button-wrapper fade-up">
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Dina+%26+Fadhil&dates=20251019T090000/20251019T140000&details=Undangan+Pernikahan+Dina+%26+Fadhil&location=Gedung+Serba+Guna+Dahlia" target="_blank" class="button button-primary">Tandai Kalender</a>
+          </div>
+        </section>
+
+        <section id="story" style="background-color: var(--color-light-gray);">
+          <div class="container">
+            <h2 class="fade-up">Cerita Kami</h2>
+            <hr class="section-divider fade-up">
+            <div class="story-layout">
+              <div class="story-image fade-up">
+                <img src="images/bg3.jpeg" alt="Foto Dina dan Fadhil">
+              </div>
+              <div class="story-text fade-up">
+                <p>Bermula dari pertemuan sederhana, benih cinta tumbuh di antara kami. Setiap momen bersama, dari tawa hingga tantangan, semakin menguatkan keyakinan bahwa kami ditakdirkan untuk satu sama lain.</p>
+                <p>Dengan hati penuh syukur, kami melangkah ke babak baru. Kehadiran dan doa restu Anda akan menjadi pelengkap kebahagiaan kami.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="container">
+          <h2 class="fade-up">Galeri Momen</h2>
+          <hr class="section-divider fade-up">
+          <div class="gallery-grid">
+            <div class="gallery-item fade-up"><img src="images/bg14.jpeg" alt="Foto Prewedding 1"></div>
+            <div class="gallery-item fade-up"><img src="images/bg9.jpeg" alt="Foto Prewedding 2"></div>
+            <div class="gallery-item fade-up"><img src="images/bg4.jpeg" alt="Foto Prewedding 3"></div>
+            <div class="gallery-item fade-up"><img src="images/bg8.jpeg" alt="Foto Prewedding 4"></div>
+          </div>
+        </section>
+
+        <section id="rsvp" style="background-color: var(--color-light-gray);">
+          <div class="container">
+            <h2 class="fade-up">Konfirmasi Kehadiran</h2>
+            <p style="text-align: center;" class="fade-up">Kami sangat mengharapkan kehadiran Anda. Mohon konfirmasi melalui tombol di bawah ini.</p>
+            <div class="calendar-button-wrapper fade-up">
+              <a href="#" id="rsvpButton" class="button button-primary">RSVP via WhatsApp</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="location" class="container">
+          <h2 class="fade-up">Lokasi Acara</h2>
+          <hr class="section-divider fade-up">
+          <div class="map-info fade-up">
+            <p><strong>Tempat Kediaman Mempelai Wanita</strong><br>
+            Jl. Kp. Bojingpulus, RT.01/RW.07, Ds. Bojongloa, Kec.Rancaecek, Kab. Bandung</p>
+          </div>
+          <div class="map-container fade-up">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.580862418224!2d106.91142507484504!3d-6.574462193418953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69b9e8486e8f0d%3A0x2a398a6c5dfdc7a6!2sDeru%20Air%20Resto%20%26%20Camp%20Ground%20%7CRestoran%20Keluarga%20%7CRekreasi%20Alam%7C!5e0!3m2!1sid!2sid!4v1758464105621!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="calendar-button-wrapper fade-up">
+            <a href="https://maps.google.com" target="_blank" class="button button-outline">Petunjuk Arah</a>
+          </div>
+        </section>
+
+        <section class="social-section">
+          <div class="container">
+            <h3 class="fade-up">Pesan Sekarang</h3>
+            <div class="social-icons">
+              <a href="https://wa.me/6285774794055" target="_blank" class="social-button fade-up" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.047 24l6.305-1.654a11.882 11.882 0 005.693 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </a>
+              <a href="https://instagram.com/dina.fadhil.wedding" target="_blank" class="social-button fade-up" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069m0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073m0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162m0 10.163c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4m6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@xyznetwork21?is_from_webapp=1&sender_device=pc" target="_blank" class="social-button fade-up" aria-label="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.54 2.89 2.89 0 0 1 2.31-4.64 2.89 2.89 0 0 1 2.31 1.02V9.59c0-.25-.05-.5-.15-.73a2.89 2.89 0 0 0-2.3-1.56 2.89 2.89 0 0 0-2.31 4.64 2.89 2.89 0 0 0 2.31-1.02v3.58a6.33 6.33 0 0 0 6.33 6.33c3.5 0 6.33-2.83 6.33-6.33a6.33 6.33 0 0 0-6.33-6.33z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p class="fade-up">Terima kasih atas doa dan restu Anda.</p>
+      <p class="fade-up couple-name" style="margin-top: 0.5rem; font-weight: 700; font-family: var(--font-serif); font-size: 1.5rem;">Dina & Fadhil</p>
+      <p class="fade-up" style="margin-top: 1.5rem; font-size: 0.8rem;">© 2025 Undangan Digital.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backgroundImages = [
+        'images/bg1.jpeg',
+        'images/bg2.jpeg',
+        'images/bg3.jpeg',
+        'images/bg4.jpeg',
+        'images/bg5.jpeg',
+        'images/bg6.jpeg',
+        'images/bg7.jpeg',
+        'images/bg8.jpeg',
+        'images/bg9.jpeg',
+        'images/bg10.jpeg',
+        'images/bg11.jpeg',
+        'images/bg12.jpeg',
+        'images/bg13.jpeg',
+        'images/bg14.jpeg',
+      ];
+      let currentImageIndex = 0;
+
+      function changeBackground() {
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        document.body.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+      }
+
+      document.body.style.backgroundImage = `url('${backgroundImages[0]}')`;
+      setInterval(changeBackground, 7000);
+
+      const fadeUpObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeUpObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-up').forEach(el => {
+        fadeUpObserver.observe(el);
+      });
+
+      const rsvpButton = document.getElementById('rsvpButton');
+      if (rsvpButton) {
+        rsvpButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          const phoneNumber = '6281234567890';
+          const message = encodeURIComponent(
+            'Halo, saya ingin mengonfirmasi kehadiran untuk acara pernikahan Dina & Fadhil.\n\nNama: [Tulis Nama Anda]\nJumlah Tamu: [Tulis Jumlah Tamu]\n\nTerima kasih.'
+          );
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+          window.open(whatsappUrl, '_blank');
+          alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk mengirim konfirmasi.');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
