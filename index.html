@@ -91,13 +91,14 @@
 
     .button {
       display: inline-block;
-      padding: 12px 28px;
+      padding: 14px 32px; /* Sedikit diperbesar untuk mobile */
       font-family: var(--font-sans);
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 8px; /* Diperbesar sedikit agar lebih mudah diklik */
       font-weight: 500;
       transition: all 0.3s ease;
       cursor: pointer;
+      text-align: center; /* Pastikan teks tombol rata tengah */
     }
 
     .button-primary {
@@ -139,7 +140,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 16px;
+      padding: 24px 16px; /* Padding atas/bawah diperbesar, kiri/kanan disesuaikan */
       position: relative;
       color: var(--color-white);
     }
@@ -157,7 +158,7 @@
     }
 
     .hero-ornament {
-      width: 140px;
+      width: 100px; /* Diperkecil untuk mobile */
       margin-bottom: 1rem;
       height: 1px;
       background: var(--color-gold);
@@ -165,10 +166,11 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-size: clamp(2rem, 8vw, 4rem); /* Batas atas dikurangi untuk mobile */
       font-weight: 400;
-      margin: 0 0 2.5rem 0;
+      margin: 0 0 1.5rem 0; /* Jarak bawah dikurangi */
       color: var(--color-white);
+      line-height: 1.2; /* Line height diperkecil agar tidak terlalu tinggi */
     }
 
     .hero .subtitle, .hero .date {
@@ -188,10 +190,10 @@
 
     .hero .hero-intro {
       font-family: var(--font-sans);
-      font-size: 1rem;
+      font-size: 0.9rem; /* Diperkecil sedikit */
       color: var(--color-white);
       opacity: 0.9;
-      letter-spacing: 3px;
+      letter-spacing: 2px; /* Diperkecil agar tidak terlalu renggang */
       text-transform: uppercase;
       margin-bottom: 0.2rem;
     }
@@ -221,7 +223,7 @@
     }
 
     .detail-item {
-      padding: 1rem;
+      padding: 1.5rem 1rem; /* Padding diperbesar agar area sentuh lebih besar */
     }
 
     .detail-item svg {
@@ -252,12 +254,12 @@
     .story-layout img {
       width: 100%;
       height: auto;
-      border-radius: 4px;
+      border-radius: 8px; /* Diperbesar agar konsisten */
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-top: 2rem;
     }
@@ -265,7 +267,7 @@
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 8px; /* Diperbesar agar konsisten */
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
 
@@ -273,6 +275,8 @@
       width: 100%;
       display: block;
       transition: transform 0.4s ease;
+      aspect-ratio: 3/4; /* Menjaga rasio gambar agar tidak terlalu panjang */
+      object-fit: cover; /* Memastikan gambar mengisi wadah tanpa distorsi */
     }
 
     .gallery-item:hover img {
@@ -285,8 +289,8 @@
 
     .map-container {
       width: 100%;
-      height: 400px;
-      border-radius: 4px;
+      height: 300px; /* Diperkecil untuk menghemat ruang di mobile */
+      border-radius: 8px; /* Diperbesar agar konsisten */
       overflow: hidden;
       margin-top: 2rem;
       border: 1px solid #eee;
@@ -322,7 +326,7 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 16px; /* Diperkecil agar ikon tidak terlalu berjauhan di layar kecil */
       flex-wrap: wrap;
     }
 
@@ -330,8 +334,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
+      width: 48px; /* Sedikit diperkecil */
+      height: 48px; /* Sedikit diperkecil */
       border-radius: 50%;
       background-color: var(--color-charcoal);
       color: var(--color-white);
@@ -345,8 +349,8 @@
     }
 
     .social-button svg {
-      width: 24px;
-      height: 24px;
+      width: 22px; /* Sedikit diperkecil */
+      height: 22px; /* Sedikit diperkecil */
     }
 
     footer {
@@ -366,10 +370,10 @@
       color: var(--color-gold);
     }
 
-        .music-btn {
+    .music-btn {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
+      bottom: 20px; /* Sedikit dinaikkan */
+      right: 20px; /* Sedikit digeser ke kiri */
       width: 50px;
       height: 50px;
       background-color: var(--color-gold);
@@ -418,6 +422,61 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
+    /* --- PENAMBAHAN KHUSUS UNTUK MOBILE --- */
+    @media (max-width: 767px) {
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
+        gap: 0.5rem;
+      }
+    }
+      .hero {
+        padding: 40px 16px; /* Lebih banyak ruang di atas dan bawah */
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 7vw, 3.5rem); /* Ukuran font lebih kecil untuk mobile */
+      }
+
+      h2 {
+        font-size: 2rem; /* Judul section lebih kecil */
+      }
+
+      .button {
+        padding: 16px 24px; /* Ukuran tombol lebih besar untuk sentuhan */
+        font-size: 1rem; /* Ukuran font tombol lebih besar */
+      }
+
+      .detail-item {
+        padding: 1.25rem 0.75rem; /* Menyesuaikan padding */
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, fr); /* 4 kolom sama lebar */
+        gap: 0.5rem; /* Jarak antar kotak, bisa disesuaikan */
+        margin-top: 2rem;
+      }
+
+      .map-container {
+        height: 250px; /* Peta lebih pendek di mobile */
+      }
+
+      .social-button {
+        width: 44px;
+        height: 44px;
+      }
+
+      .social-button svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      footer .couple-name {
+        font-size: 1.25rem; /* Nama pasangan lebih kecil di footer */
+      }
+    
   </style>
 </head>
 <body>
@@ -446,7 +505,7 @@
             <div class="detail-item fade-up">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 10.22A5.5 5.5 0 0 0 17.5 9h-11a5.5 5.5 0 0 0-2.92 10.22"></path><path d="M17.5 9V4a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v5"></path><path d="M8 16h8"></path></svg>
               <h3>Akad Nikah</h3>
-              <p>Minggu, 19 Oktober 2025<br>Pukul 09.00 WIB - Selesai</p>
+              <p>Minggu, 19 Oktober 2025<br>Pukul 08.00 WIB - Selesai</p>
             </div>
             <div class="detail-item fade-up">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
@@ -501,10 +560,10 @@
           <hr class="section-divider fade-up">
           <div class="map-info fade-up">
             <p><strong>Tempat Kediaman Mempelai Wanita</strong><br>
-            Jl. Kp. Bojingpulus, RT.01/RW.07, Ds. Bojongloa, Kec.Rancaecek, Kab. Bandung</p>
+            Jl. Kp. Bojongpulus, RT.01/RW.07, Ds. Bojongloa, Kec.Rancaecek, Kab. Bandung</p>
           </div>
           <div class="map-container fade-up">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.580862418224!2d106.91142507484504!3d-6.574462193418953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69b9e8486e8f0d%3A0x2a398a6c5dfdc7a6!2sDeru%20Air%20Resto%20%26%20Camp%20Ground%20%7CRestoran%20Keluarga%20%7CRekreasi%20Alam%7C!5e0!3m2!1sid!2sid!4v1758464105621!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.439177679571!2d107.76270360000001!3d-6.957408199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c373c732ac61%3A0xa7837603437e723d!2sMesjid%20Bojong%20Pulus!5e0!3m2!1sen!2sid!4v1758620331542!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="calendar-button-wrapper fade-up">
             <a href="https://maps.google.com" target="_blank" class="button button-outline">Petunjuk Arah</a>
@@ -545,11 +604,11 @@
     </div>
   </footer>
 
-    <div class="music-btn" id="music-toggle" title="Putar/Hentikan Musik">
-    </div>
+  <div class="music-btn" id="music-toggle" title="Putar/Hentikan Musik">
+  </div>
 
   <audio id="background-music" loop>
-      <source src="https://files.catbox.moe/r2mn34.mp3" type="audio/mpeg">
+    <source src="https://files.catbox.moe/r2mn34.mp3" type="audio/mpeg">
   </audio>
 
   <script>
@@ -597,7 +656,7 @@
       if (rsvpButton) {
         rsvpButton.addEventListener('click', (e) => {
           e.preventDefault();
-          const phoneNumber = '6281234567890';
+          const phoneNumber = '628947372041'; // Nomor WhatsApp Dina & Fadhil
           const message = encodeURIComponent(
             'Halo, saya ingin mengonfirmasi kehadiran untuk acara pernikahan Dina & Fadhil.\n\nNama: [Tulis Nama Anda]\nJumlah Tamu: [Tulis Jumlah Tamu]\n\nTerima kasih.'
           );
@@ -606,7 +665,8 @@
           alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk mengirim konfirmasi.');
         });
       }
-        // --- LOGIKA KONTROL MUSIK & HALAMAN PEMBUKA ---
+
+      // --- LOGIKA KONTROL MUSIK & HALAMAN PEMBUKA ---
       const music = document.getElementById('background-music');
       const musicToggle = document.getElementById('music-toggle');
       const openInvitationButton = document.getElementById('open-invitation');
@@ -631,19 +691,37 @@
 
       musicToggle.addEventListener('click', toggleMusic);
 
-      openInvitationButton.addEventListener('click', () => {
-        openingCover.classList.add('hidden');
-        if (!isPlaying) {
-            toggleMusic(); // Autoplay musik saat undangan dibuka
-        }
+      // --- AUTOPLAY DENGAN MUTED + UNMUTE SAAT INTERAKSI ---
+      music.muted = true;
+      music.play().catch(() => {
+        console.log("Autoplay diblokir tanpa interaksi. Menunggu klik pengguna...");
       });
+
+      const handleFirstInteraction = () => {
+        music.muted = false;
+        if (!isPlaying) {
+          toggleMusic();
+        }
+        document.removeEventListener('click', handleFirstInteraction);
+        document.removeEventListener('touchstart', handleFirstInteraction);
+        document.removeEventListener('scroll', handleFirstInteraction);
+      };
+
+      document.addEventListener('click', handleFirstInteraction, { once: true });
+      document.addEventListener('touchstart', handleFirstInteraction, { once: true });
+      document.addEventListener('scroll', handleFirstInteraction, { once: true });
+
+      // Catatan: logika di bawah ini tidak akan berjalan karena elemen #open-invitation dan #opening-cover tidak ada di HTML.
+      // Jika ingin membuat halaman pembuka, tambahkan elemen tersebut secara manual.
+      if (openInvitationButton && openingCover) {
+        openInvitationButton.addEventListener('click', () => {
+          openingCover.classList.add('hidden');
+          if (!isPlaying) {
+              toggleMusic(); // Autoplay musik saat undangan dibuka
+          }
+        });
+      }
     });
   </script>
 </body>
-
 </html>
-
-
-
-
-
