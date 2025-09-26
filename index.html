@@ -91,14 +91,14 @@
 
     .button {
       display: inline-block;
-      padding: 14px 32px; /* Sedikit diperbesar untuk mobile */
+      padding: 14px 32px;
       font-family: var(--font-sans);
       text-decoration: none;
-      border-radius: 8px; /* Diperbesar sedikit agar lebih mudah diklik */
+      border-radius: 8px;
       font-weight: 500;
       transition: all 0.3s ease;
       cursor: pointer;
-      text-align: center; /* Pastikan teks tombol rata tengah */
+      text-align: center;
     }
 
     .button-primary {
@@ -140,7 +140,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 24px 16px; /* Padding atas/bawah diperbesar, kiri/kanan disesuaikan */
+      padding: 24px 16px;
       position: relative;
       color: var(--color-white);
     }
@@ -158,7 +158,7 @@
     }
 
     .hero-ornament {
-      width: 100px; /* Diperkecil untuk mobile */
+      width: 100px;
       margin-bottom: 1rem;
       height: 1px;
       background: var(--color-gold);
@@ -166,11 +166,11 @@
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 8vw, 4rem); /* Batas atas dikurangi untuk mobile */
+      font-size: clamp(2rem, 8vw, 4rem);
       font-weight: 400;
-      margin: 0 0 1.5rem 0; /* Jarak bawah dikurangi */
+      margin: 0 0 1.5rem 0;
       color: var(--color-white);
-      line-height: 1.2; /* Line height diperkecil agar tidak terlalu tinggi */
+      line-height: 1.2;
     }
 
     .hero .subtitle, .hero .date {
@@ -190,10 +190,10 @@
 
     .hero .hero-intro {
       font-family: var(--font-sans);
-      font-size: 0.9rem; /* Diperkecil sedikit */
+      font-size: 0.9rem;
       color: var(--color-white);
       opacity: 0.9;
-      letter-spacing: 2px; /* Diperkecil agar tidak terlalu renggang */
+      letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 0.2rem;
     }
@@ -223,7 +223,7 @@
     }
 
     .detail-item {
-      padding: 1.5rem 1rem; /* Padding diperbesar agar area sentuh lebih besar */
+      padding: 1.5rem 1rem;
     }
 
     .detail-item svg {
@@ -254,7 +254,7 @@
     .story-layout img {
       width: 100%;
       height: auto;
-      border-radius: 8px; /* Diperbesar agar konsisten */
+      border-radius: 8px;
     }
 
     .gallery-grid {
@@ -267,7 +267,7 @@
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 8px; /* Diperbesar agar konsisten */
+      border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
 
@@ -275,8 +275,8 @@
       width: 100%;
       display: block;
       transition: transform 0.4s ease;
-      aspect-ratio: 3/4; /* Menjaga rasio gambar agar tidak terlalu panjang */
-      object-fit: cover; /* Memastikan gambar mengisi wadah tanpa distorsi */
+      aspect-ratio: 3/4;
+      object-fit: cover;
     }
 
     .gallery-item:hover img {
@@ -289,8 +289,8 @@
 
     .map-container {
       width: 100%;
-      height: 300px; /* Diperkecil untuk menghemat ruang di mobile */
-      border-radius: 8px; /* Diperbesar agar konsisten */
+      height: 300px;
+      border-radius: 8px;
       overflow: hidden;
       margin-top: 2rem;
       border: 1px solid #eee;
@@ -326,7 +326,7 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 16px; /* Diperkecil agar ikon tidak terlalu berjauhan di layar kecil */
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -334,8 +334,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 48px; /* Sedikit diperkecil */
-      height: 48px; /* Sedikit diperkecil */
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background-color: var(--color-charcoal);
       color: var(--color-white);
@@ -349,8 +349,8 @@
     }
 
     .social-button svg {
-      width: 22px; /* Sedikit diperkecil */
-      height: 22px; /* Sedikit diperkecil */
+      width: 22px;
+      height: 22px;
     }
 
     footer {
@@ -372,8 +372,8 @@
 
     .music-btn {
       position: fixed;
-      bottom: 20px; /* Sedikit dinaikkan */
-      right: 20px; /* Sedikit digeser ke kiri */
+      bottom: 20px;
+      right: 20px;
       width: 50px;
       height: 50px;
       background-color: var(--color-gold);
@@ -395,6 +395,68 @@
     .music-btn svg {
       width: 24px;
       height: 24px;
+    }
+
+    /* --- Style untuk Bagian Kirim Hadiah --- */
+    .gift-accounts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .account-item {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .account-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .account-item img {
+      max-height: 40px;
+      margin-bottom: 1.5rem;
+    }
+
+    .account-item h3 {
+      font-size: 1.1rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .account-item .account-number {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 0.25rem;
+      letter-spacing: 1px;
+    }
+
+    .account-item p {
+      margin-bottom: 1.5rem;
+    }
+
+    .copy-btn {
+      background-color: var(--color-gold);
+      color: var(--color-white);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background-color: #b99a5e;
     }
 
     @media (min-width: 768px) {
@@ -423,122 +485,42 @@
       }
     }
 
-    /* --- PENAMBAHAN KHUSUS UNTUK MOBILE --- */
     @media (max-width: 767px) {
-
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
       }
-    }
       .hero {
-        padding: 40px 16px; /* Lebih banyak ruang di atas dan bawah */
+        padding: 40px 16px;
       }
-
       .hero h1 {
-        font-size: clamp(1.8rem, 7vw, 3.5rem); /* Ukuran font lebih kecil untuk mobile */
+        font-size: clamp(1.8rem, 7vw, 3.5rem);
       }
-
       h2 {
-        font-size: 2rem; /* Judul section lebih kecil */
+        font-size: 2rem;
       }
-
       .button {
-        padding: 16px 24px; /* Ukuran tombol lebih besar untuk sentuhan */
-        font-size: 1rem; /* Ukuran font tombol lebih besar */
+        padding: 16px 24px;
+        font-size: 1rem;
       }
-
       .detail-item {
-        padding: 1.25rem 0.75rem; /* Menyesuaikan padding */
+        padding: 1.25rem 0.75rem;
       }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(4, fr); /* 4 kolom sama lebar */
-        gap: 0.5rem; /* Jarak antar kotak, bisa disesuaikan */
-        margin-top: 2rem;
-      }
-
       .map-container {
-        height: 250px; /* Peta lebih pendek di mobile */
+        height: 250px;
       }
-
       .social-button {
         width: 44px;
         height: 44px;
       }
-
       .social-button svg {
         width: 20px;
         height: 20px;
       }
-
       footer .couple-name {
-        font-size: 1.25rem; /* Nama pasangan lebih kecil di footer */
-      }
-
-      /* --- Style untuk Bagian Kirim Hadiah --- */
-      .gift-accounts {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2.5rem;
-      }
-
-      .account-item {
-        background-color: #fff;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        padding: 2rem 1.5rem;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .account-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      }
-
-      .account-item img {
-        max-height: 40px;
-        margin-bottom: 1.5rem;
-      }
-
-      .account-item h3 {
-        font-size: 1.1rem;
-        color: var(--color-charcoal);
-        margin-bottom: 0.5rem;
-      }
-
-      .account-item .account-number {
         font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--color-gold);
-        margin-bottom: 0.25rem;
-        letter-spacing: 1px;
       }
-
-      .account-item p {
-        margin-bottom: 1.5rem;
-      }
-
-      .copy-btn {
-        background-color: var(--color-gold);
-        color: var(--color-white);
-        border: none;
-        padding: 10px 20px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: var(--font-sans);
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .copy-btn:hover {
-        background-color: #b99a5e;
-      }
-    
+    }
   </style>
 </head>
 <body>
@@ -549,7 +531,7 @@
       <p class="hero-intro">The Wedding Of</p>
       <h1>Diana Nun Zakiah Darajat 
         <br>&<br> 
-          Fadhil Arta Julywan S.Sos</h1>
+        Fadhil Arta Julywan S.Sos</h1>
       <p class="subtitle">Satu cerita, dua hati. Kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu.</p>
       <p class="date">Minggu, 19 Oktober 2025</p>
       <a href="#details" class="button button-outline">Lihat Undangan</a>
@@ -616,7 +598,7 @@
             </div>
           </div>
         </section>
-
+        
         <section id="location" class="container">
           <h2 class="fade-up">Lokasi Acara</h2>
           <hr class="section-divider fade-up">
@@ -632,13 +614,30 @@
           </div>
         </section>
 
+        <section id="wedding-gift" class="container">
+            <h2 class="fade-up">Kirim Hadiah</h2>
+            <hr class="section-divider fade-up">
+            <p style="text-align: center;" class="fade-up">
+              Doa restu Anda adalah hadiah terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih, kami dengan senang hati menerimanya melalui:
+            </p>
+            <div class="gift-accounts">
+              <div class="account-item fade-up">
+                <img src="https://i.pinimg.com/736x/b4/7a/0b/b47a0b26db3f769cb17a7c3217dcef30.jpg" alt="Logo Bank Mandiri">
+                <h3>Bank Mandiri</h3>
+                <p class="account-number">1330016994113</p>
+                <p>a.n. Fadhil Arta Julywan</p>
+                <button class="copy-btn" data-account="1330016994113">Salin No. Rekening</button>
+              </div>
+            </div>
+        </section>
+
         <section class="social-section">
           <div class="container">
             <h3 class="fade-up">Pesan Sekarang</h3>
             <div class="social-icons">
               <a href="https://wa.me/6285774794055" target="_blank" class="social-button fade-up" aria-label="WhatsApp">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.047 24l6.305-1.654a11.882 11.882 0 005.693 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.047 24l6.305-1.654a11.882 11.882 0 005.693 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
               </a>
               <a href="https://instagram.com/Diana.fadhil.wedding" target="_blank" class="social-button fade-up" aria-label="Instagram">
@@ -654,24 +653,6 @@
             </div>
           </div>
         </section>
-
-        <section id="wedding-gift" class="container">
-          <h2 class="fade-up">Kirim Hadiah</h2>
-          <hr class="section-divider fade-up">
-          <p style="text-align: center;" class="fade-up">
-            Doa restu Anda adalah hadiah terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih, kami dengan senang hati menerimanya melalui:
-          </p>
-          <div class="gift-accounts">
-            <div class="account-item fade-up">
-              <img src="https://i.pinimg.com/736x/b4/7a/0b/b47a0b26db3f769cb17a7c3217dcef30.jpg" alt="Logo Bank BRI">
-              <h3>Bank Mandiri</h3>
-              <p class="account-number">1330016994113</p>
-              <p>a.n. Fadhil Arta Julywan</p>
-              <button class="copy-btn" data-account="1330016994113">Salin No. Rekening</button>
-          </div>
-        </div>
-      </section>
-
 
       </main>
     </div>
@@ -747,32 +728,27 @@
         });
       }
 
-      // --- LOGIKA KONTROL MUSIK & HALAMAN PEMBUKA ---
       const music = document.getElementById('background-music');
       const musicToggle = document.getElementById('music-toggle');
-      const openInvitationButton = document.getElementById('open-invitation');
-      const openingCover = document.getElementById('opening-cover');
-
       const iconPlay = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
       const iconPause = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
       let isPlaying = false;
       
-      musicToggle.innerHTML = iconPlay; // Set ikon awal
+      musicToggle.innerHTML = iconPlay;
 
       function toggleMusic() {
         isPlaying = !isPlaying;
         if (isPlaying) {
-            music.play();
-            musicToggle.innerHTML = iconPause;
+          music.play();
+          musicToggle.innerHTML = iconPause;
         } else {
-            music.pause();
-            musicToggle.innerHTML = iconPlay;
+          music.pause();
+          musicToggle.innerHTML = iconPlay;
         }
       }
 
       musicToggle.addEventListener('click', toggleMusic);
 
-      // --- AUTOPLAY DENGAN MUTED + UNMUTE SAAT INTERAKSI ---
       music.muted = true;
       music.play().catch(() => {
         console.log("Autoplay diblokir tanpa interaksi. Menunggu klik pengguna...");
@@ -792,34 +768,22 @@
       document.addEventListener('touchstart', handleFirstInteraction, { once: true });
       document.addEventListener('scroll', handleFirstInteraction, { once: true });
 
-      // Catatan: logika di bawah ini tidak akan berjalan karena elemen #open-invitation dan #opening-cover tidak ada di HTML.
-      // Jika ingin membuat halaman pembuka, tambahkan elemen tersebut secara manual.
-      if (openInvitationButton && openingCover) {
-        openInvitationButton.addEventListener('click', () => {
-          openingCover.classList.add('hidden');
-          if (!isPlaying) {
-              toggleMusic(); // Autoplay musik saat undangan dibuka
-          }
-        });
-      }
-
-      // --- LOGIKA UNTUK TOMBOL SALIN REKENING ---
       document.querySelectorAll('.copy-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const accountNumber = button.dataset.account;
-        navigator.clipboard.writeText(accountNumber).then(() => {
+        button.addEventListener('click', () => {
+          const accountNumber = button.dataset.account;
+          navigator.clipboard.writeText(accountNumber).then(() => {
             const originalText = button.innerText;
             button.innerText = 'Tersalin!';
             setTimeout(() => {
-                button.innerText = originalText;
+              button.innerText = originalText;
             }, 2000);
-        }).catch(err => {
+          }).catch(err => {
             console.error('Gagal menyalin: ', err);
             alert('Gagal menyalin nomor rekening.');
+          });
         });
       });
     });
-  });
   </script>
 </body>
 </html>
